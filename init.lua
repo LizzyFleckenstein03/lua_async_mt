@@ -9,7 +9,7 @@ end)
 function lua_async.mt_validate_objs(...)
 	for _, ref in ipairs {...} do
 		if not ref:is_player() and not ref:get_luaentity() then
-			coroutine.yield(true)
+			lua_async.kill_thread()
 		end
 	end
 end
