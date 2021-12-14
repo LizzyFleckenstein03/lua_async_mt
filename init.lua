@@ -1,6 +1,6 @@
 local path = minetest.get_modpath(minetest.get_current_modname()) .. "/src/"
 
-dofile(path .. "init.lua")(path)
+dofile(path .. "init.lua")(path, true)
 
 minetest.register_globalstep(function(dtime)
 	lua_async.step(dtime)
